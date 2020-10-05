@@ -8,7 +8,7 @@
 
   display: grid;
 
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /*grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: 
     "header header header header"
@@ -16,7 +16,12 @@
     "footer footer footer footer";
 
     grid-column-gap: 20px;
-    grid-row-gap: 30px;
+    grid-row-gap: 30px;*/
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  gap: 15px;
 }
 
 .item {
@@ -26,16 +31,25 @@
 .item-1 {
   background-color: blue;
   grid-area: header;
+
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 .item-2 {
   background-color: yellow;
   grid-area: main;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 }
 .item-3 {
   background-color: red;
   grid-area: sidebar;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
 }
 .item-4 {
   background-color: green;
   grid-area: footer;
+  grid-column: 7 / 8;
+  grid-row: 7 / 8;
 }
